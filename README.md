@@ -20,7 +20,8 @@ It works by checking if a global document exists in it's current environment. If
 Testdom supports an argument of *additional globals* that will be loaded (using require) only if no DOM exists. This way users can experiment with different modules as browser global replacements and polyfills.
 
     require('testdom')('<html><body></body></html>', {
-        localStorage : 'localStorage'
+        localStorage : 'localStorage',
+        Promise:  'es6-promises'
     })
     console.log(localStorage)
 
@@ -33,6 +34,7 @@ A list of modules confirmed to work well as a global/polyfill for jsdom.
 | Global        | Module        | Notes |
 |:------------- |:------------- |:----- | 
 | localStorage  | [localStorage](https://www.npmjs.com/package/localStorage) | 404 link but npm install works |
+| Promise       | [es6-promises](https://www.npmjs.com/package/es6-promises) | Different than `es6-promise`.  
 
 ## Testling
 
